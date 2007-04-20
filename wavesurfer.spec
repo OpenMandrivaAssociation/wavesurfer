@@ -40,18 +40,19 @@ mkdir -p $RPM_BUILD_ROOT%{_libdir}
 cp -r wsurf* $RPM_BUILD_ROOT%{_libdir}
 install -m755 %{name}.tcl -D $RPM_BUILD_ROOT/%{_bindir}/%{name}
 
-# menu
-install -d $RPM_BUILD_ROOT%{_menudir}
-cat << EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}):command="wavesurfer" \
-needs="x11" \
-section="Multimedia/Sound" \
-title="WaveSurfer" \
-icon="wavesurfer.png" \
-longtitle="Graphical sound editor"
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
+cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
+[Desktop Entry]
+Encoding=UTF-8
+Name=WaveSurfer
+Comment=Graphical sound editor
+Exec=%{name}
+Icon=%{name}
+Terminal=false
+Type=Application
+Categories=Audio;Player;X-MandrivaLinux-Multimedia-Audio;AudioVideo;
 EOF
 
-#icons
 install -m644 %{SOURCE11} -D $RPM_BUILD_ROOT%{_miconsdir}/%{name}.png
 install -m644 %{SOURCE12} -D $RPM_BUILD_ROOT%{_iconsdir}/%{name}.png
 install -m644 %{SOURCE13} -D $RPM_BUILD_ROOT%{_liconsdir}/%{name}.png
@@ -73,4 +74,4 @@ rm -rf %{buildroot}
 %{_iconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
-%{_menudir}/%{name}
+%{_datadir}/applications/mandriva-%{name}.desktop
