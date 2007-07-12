@@ -1,6 +1,6 @@
 %define name	wavesurfer
 %define version 1.8.5
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary:	Script-driven sound processing toolkit.
 Name:		%{name}
@@ -36,8 +36,8 @@ embedding WaveSurfer visualization components in other applications.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT%{_libdir}
-cp -r wsurf* $RPM_BUILD_ROOT%{_libdir}
+mkdir -p $RPM_BUILD_ROOT%{_prefix}/lib
+cp -r wsurf* $RPM_BUILD_ROOT%{_prefix}/lib
 install -m755 %{name}.tcl -D $RPM_BUILD_ROOT/%{_bindir}/%{name}
 
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
@@ -70,7 +70,7 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc doc/* LICENSE.txt README.txt 
 %{_bindir}/%{name}
-%{_libdir}/wsurf*
+%{_prefix}/lib/wsurf*
 %{_iconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
