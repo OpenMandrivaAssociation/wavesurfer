@@ -43,7 +43,6 @@ install -m755 %{name}.tcl -D $RPM_BUILD_ROOT/%{_bindir}/%{name}
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
-Encoding=UTF-8
 Name=WaveSurfer
 Comment=Graphical sound editor
 Exec=%{name}
