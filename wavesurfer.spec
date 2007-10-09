@@ -2,7 +2,7 @@
 %define version 1.8.5
 %define release %mkrel 2
 
-Summary:	Script-driven sound processing toolkit.
+Summary:	Script-driven sound processing toolkit
 Name:		%{name}
 Version: 	%{version}
 Release: 	%{release}
