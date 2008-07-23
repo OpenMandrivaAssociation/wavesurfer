@@ -1,6 +1,6 @@
 %define name	wavesurfer
 %define version 1.8.5
-%define release %mkrel 2
+%define release %mkrel 4
 
 Summary:	Script-driven sound processing toolkit
 Name:		%{name}
