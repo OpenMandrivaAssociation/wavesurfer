@@ -78,3 +78,60 @@ rm -rf %{buildroot}
 %{_miconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
 %{_datadir}/applications/mandriva-%{name}.desktop
+
+
+%changelog
+* Wed Sep 09 2009 Thierry Vignaud <tvignaud@mandriva.com> 1.8.5-5mdv2010.0
++ Revision: 434702
+- rebuild
+
+* Wed Jul 23 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.8.5-4mdv2009.0
++ Revision: 242968
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+- fix summary-ended-with-dot
+- kill desktop-file-validate's 'warning: key "Encoding" in group "Desktop Entry" is deprecated'
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Thu Jul 12 2007 Olivier Blin <oblin@mandriva.com> 1.8.5-2mdv2008.0
++ Revision: 51553
+- use /usr/lib instead of libdir, it is a noarch package (thanks Goetz)
+
+* Fri Apr 20 2007 Olivier Blin <oblin@mandriva.com> 1.8.5-1mdv2008.0
++ Revision: 16012
+- XDG menu
+- require tcl-snack
+- 1.8.5
+- Import wavesurfer
+
+
+
+* Thu Jun 17 2004 Per Øyvind Karlsen <peroyvind@linux-mandrake.com> 1.6.4-1mdk
+- 1.6.4
+- cosmetics
+
+* Fri May 14 2004 Michael Scherer <misc@mandrake.org> 1.6.3-1mdk
+- New release 1.6.3
+- correct menu problem
+
+* Mon Feb 16 2004 Austin Acton <austin@mandrake.org> 1.6.2-1mdk
+- 1.6.2
+
+* Fri Sep 5 2003 Austin Acton <aacton@yorku.ca> 1.5.3-1mdk
+- 1.5.3
+
+* Mon Jul 7 2003 Austin Acton <aacton@yorku.ca> 1.5.2-1mdk
+- 1.5.2
+
+* Sun Jun 8 2003 Austin Acton <aacton@yorku.ca> 1.5.1-1mdk
+- 1.5.1
+- fix icon names
+- noarch
+
+* Sat Jan 11 2003 Austin Acton <aacton@yorku.ca> 1.4.6-1mdk
+- initial package
