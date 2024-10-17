@@ -8,7 +8,7 @@ Version: 	%{version}
 Release: 	%{release}
 License: 	MIT
 Group: 		Sound
-URL: 		http://www.speech.kth.se/wavesurfer/
+URL: 		https://www.speech.kth.se/wavesurfer/
 Source: 	%{name}-%{version}.tar.bz2
 Source11: 	%{name}16.png
 Source12: 	%{name}32.png
